@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" >
+
+    <h:head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />
+        <title>JSF CRUD Example</title>
+        <style type="text/css">
+            .updateBtnStyle {
+                width: 80px !important;        	
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <h2 style="text-align: center" class="col-sm-4">Edit Author Record</h2>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <h:outputLabel for="author_name" class="control-label col-sm-2">AUTHOR NAME:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="author_name" value="#{editRecordObj.author_name}" class="form-control" style="width:800px"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="job_decsription" class="control-label col-sm-2">JOB DESCRIPTION:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputTextarea id="job_decsription" value="#{editRecordObj.job_description}" style="width:800px" cols="50" rows="10" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="email" class="control-label col-sm-2">EMAIL:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="email" value="#{editRecordObj.email}" style="width:800px" class="form-control"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <h:commandButton value="Update" action="#{authors.updateAuthorDetails(editRecordObj)}" class="btn btn-primary updateBtnStyle" />
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>

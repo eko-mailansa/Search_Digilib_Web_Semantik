@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery UI Checkboxradio - Default functionality</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/jquery-ui-1.12.1/jquery-ui.css"/>
+        <link rel="stylesheet" href="/resources/demos/style.css"/>
+        <link rel="stylesheet" href="../resources/css/bootstrap.min.css" type="text/css">
+
+        <script src="/jquery-ui-1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("input").checkboxradio();
+            });
+        </script>
+    </head>
+    <body>
+
+    <center>        
+        <b>Shorting By:</b>
+        <!--        <label class="radio" title="Search by Judul">
+                <input title="judul" name="radio-1" data-placeholder="Enter Judul" value="btitle" checked="checked" type="radio">
+                <span>Judul</span></label>
+                <label class="radio" title="Search by Penulis">
+                <input title="penulis" name="radio-1" data-placeholder="Enter Penulis" value="btitle" checked="checked" type="radio">
+                <span>Penulis</span></label>
+                <label class="radio" title="Search by Penerbit">
+                <input title="penerbit" name="radio-1" data-placeholder="Enter Penerbit" value="btitle" checked="checked" type="radio">
+                <span>Penerbit</span></label>
+                <label class="radio" title="Search by TahunTerbit">
+                <input title="tahunTerbit" name="radio-1" data-placeholder="Enter TahunTerbit" value="btitle" checked="checked" type="radio">
+                <span>Tahun Terbit</span></label>-->
+
+        <input type="radio" name="radio-1" id="radio-10"/>
+        <label for="radio-10">Judul</label>&nbsp;                
+        <input type="radio" name="radio-1" id="radio-20"/>
+        <label for="radio-20">Penulis</label>&nbsp;                
+        <input type="radio" name="radio-1" id="radio-30"/>
+        <label for="radio-30">Penerbit</label>&nbsp;                
+        <input type="radio" name="radio-1" id="radio-40"/>
+        <label for="radio-40">Tahun Terbit</label>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>||</b>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <b>Shorting By Type:</b> 
+        <label for="checkbox-nested-10">
+            <input type="checkbox" name="checkbox-nested-10" id="checkbox-nested-10"/>Jurnal
+        </label>&nbsp;&nbsp;
+        <label for="checkbox-nested-20">
+            <input type="checkbox" name="checkbox-nested-20" id="checkbox-nested-20"/>Proceeding
+        </label>&nbsp;&nbsp;
+        <label for="checkbox-nested-30">
+            <input type="checkbox" name="checkbox-nested-30" id="checkbox-nested-30"/>Ebook
+        </label>
+    </center>
+
+    <!--<input class="input-xxlarge ui-autocomplete-input ui-autocomplete-loading" name="query" id="suggest" placeholder="Enter Book Title" autocomplete="off" required="" value="" type="text">-->
+
+</body>
+</html>

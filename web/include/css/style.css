@@ -1,0 +1,151 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 14, 2016, 11:16:49 PM
+    Author     : AnsaKhitara
+*/
+#p {line-height:1;}
+
+#ptengah {line-height:1.2;}
+
+#p4 {width: 1200px;}
+
+#p-jalan {width: 800px;
+          height: 30px
+}
+
+#space {height:0px; width:1300px; margin:0 auto}
+
+#page {height:100px; width:1300px; margin:0 auto}
+
+#wrapper{ width:1300px;
+          height:300px;
+          background: black;
+          margin-top:0px;
+          margin-left:10px;
+          margin-bottom:10px;
+          margin-right: 10px;
+          padding:10px;        
+}
+#wrapper1{ width:1300px;
+           height:auto;
+           background:black;
+           margin-top:0px;
+           margin-left:10px;
+           margin-bottom:10px;
+           margin-right: 10px;
+           padding:10px;        
+}
+
+#header-container {height:220px; background:darkblue} 
+#header { margin-bottom:0px;
+          height:240px;
+          width:1280px;
+          background:darkblue;
+          /*          float:left;*/
+          align-content: center;
+          padding:10px;   
+}
+#menu-jalan { margin-bottom:10px;
+              margin-top:0px;
+              height:20px;
+              width:1280px;
+              background: aqua;
+              float:left;
+}
+
+#menu-tengah { margin-bottom:0px;
+               margin-top:10px;
+               height:auto;
+               width:1280px;
+               background:white;
+               align-content: center;
+}
+
+#menu-tengah1 { margin-bottom:0px;
+                margin-top:10px;
+                height:auto;
+                width:1280px;
+                background:white;
+                align-content: center;
+}
+
+#menu-tengah-kanan { margin-bottom:0px;
+                     margin-top:10px;
+                     margin-right:11px;
+                     height:auto;
+                     width:990px;
+                     background:white;
+                     float: right;
+}
+
+#menu-tengah-kiri { margin-bottom:0px;
+                    margin-top:10px;
+                    margin-left:11px;
+                    height:auto;
+                    width:280px;
+                    background:white;
+                    float:left;
+}
+
+#menu-pilihan { margin-bottom:0px;
+                margin-top:10px;
+                height:80px;
+                width:1280px;
+                background:silver;
+}
+
+#messages-container {height:20px; margin:0; display: inline-block;}
+
+#messages {background: #EDEDED; width:1300px; height: 100%; margin:0; display: inline-block;}
+
+#content-container {height:100%; margin:0} 
+
+#content {float:right; background: #EDEDED; width:1280px;  height:100%; margin:0}
+
+#footer-container {height:200px; margin-bottom:0px; margin-top:10px; clear:both; display: inline-block;}
+
+#footer {background: darkblue; width:1280px; height:200px; margin-bottom:10px; margin-top:10px; display: inline-block;}
+
+#footer-kiri { 
+    margin-bottom:0px;
+               margin-top:0px;
+               margin-left:50px;
+               height:160px;
+               width:300px;
+               background:silver;
+               float:left;
+}
+
+#footer-tengah { margin-bottom:0px;
+                 margin-top:0px;
+                 margin-left:10px;
+                 height:160px;
+                 width:300px;
+                 background:silver;
+                 align-content: center;
+}
+
+#footer-kanan { margin-bottom:0px;
+                margin-top:0px;
+                margin-right:50px;
+                height:160px;
+                width:300px;
+                background:silver;
+                float:right;
+}
+
+.wrap{background: #EDEDED; width: 1300px; margin: 2px auto;}
+
+.clear{clear: both;}
+
+.badan{height: auto;}
+
+/*bagian sidebar*/
+.wrap .badan .sidebar{background: #AAAABB; float: left;	height: 100%; width: 20%;}
+
+/*akhir sidebar*/
+.wrap .badan .content{background: #EDEDED; float: left; height: 100%; width: 80%;}

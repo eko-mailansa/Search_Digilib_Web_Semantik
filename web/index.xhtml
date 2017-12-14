@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <link href="include/css/style.css" rel="stylesheet" type="text/css" />
+        <title>IT DIGITAL LIBRARY</title>
+    </h:head>
+    <h:body>
+
+        <center>
+            <div id="wrapper1">
+                <div class="header"><ui:include src="/design/header.xhtml"/></div>
+
+                <div class="menu-jalan"><ui:include src="/design/jalan.xhtml"/></div>
+
+                <div id="menu-tengah1">
+                    <div class="menu-tengah1">
+                        <br/>
+                        <h:link outcome="Home_Article" value="ARTICLE"/><br/><br/>
+                        <h:link outcome="Home_Library" value="LIBRARY"/><br/><br/>
+                        <h:link outcome="Home_Author" value="AUTHOR"/><br/><br/>
+                        <h:link outcome="Home_Search_Simple" value="SEARCHING"/>
+                    </div>
+                    <br/><br/>
+                </div>
+
+
+                <div id="footer">
+                    <div class="footer"><ui:include src="/design/footer.xhtml"/></div>
+                </div>
+            </div>
+        </center>
+    </h:body>
+</html>
+

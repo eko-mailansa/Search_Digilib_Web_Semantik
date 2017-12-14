@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" >
+
+    <h:head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />
+        <title>JSF CRUD Example</title>
+        <style type="text/css">
+            .updateBtnStyle {
+                width: 80px !important;        	
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <h2 style="text-align: center" class="col-sm-4">Edit Library Record</h2>
+            </div>
+            <hr/>
+
+            <div class="form-group">
+                <h:outputLabel for="isbn" class="control-label col-sm-4">ISBN:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="isbn" value="#{editRecordObj.isbn}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="title" class="control-label col-sm-4">TITLE:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="title" value="#{editRecordObj.title}" class="form-control"/>
+                </div>
+            </div>                
+            <div class="form-group">
+                <h:outputLabel for="descriptionOrabstract" class="control-label col-sm-4">DESCRIPTION:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputTextarea style="width:800px" id="descriptionOrabstract" value="#{editRecordObj.descriptionOrabstract}" cols="50" rows="5"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="publisher" class="control-label col-sm-4">PUBLISHER:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="publisher" value="#{editRecordObj.publisher}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="author" class="control-label col-sm-4">AUTHOR:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="author" value="#{editRecordObj.author}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="pages" class="control-label col-sm-4">PAGES:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="pages" value="#{editRecordObj.pages}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="published" class="control-label col-sm-4">PUBLISHED:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="published" value="#{editRecordObj.published}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="language" class="control-label col-sm-4">LANGUAGE:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="language" value="#{editRecordObj.language}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="format" class="control-label col-sm-4">FORMAT:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="format" value="#{editRecordObj.format}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="type" class="control-label col-sm-4">TYPE:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="type" value="#{editRecordObj.type}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="capacity" class="control-label col-sm-4">CAPACITY:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="capacity" value="#{editRecordObj.capacity}" class="form-control"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <h:commandButton value="Update" action="#{libraryBean.updateLibraryDetails(editRecordObj)}" class="btn btn-primary updateBtnStyle" />
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>

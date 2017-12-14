@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="utf-8"></meta>
+        <title>jQuery UI Checkboxradio - Default functionality</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+        <link rel="stylesheet" href="/include/css/style.css"/>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/jquery-ui-1.12.1/jquery-ui.css"/>
+        <script src="/jquery-ui-1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("input").checkboxradio();
+            });
+        </script>
+    </h:head>
+    <h:body>
+        <br/>
+        <center>        
+            <b>Shorting By:</b>
+            <input type="radio" name="radio-1" id="radio-10"/>
+            <label for="radio-10">Judul</label>&nbsp;                
+            <input type="radio" name="radio-1" id="radio-20"/>
+            <label for="radio-20">Penulis</label>&nbsp;                
+            <input type="radio" name="radio-1" id="radio-30"/>
+            <label for="radio-30">Penerbit</label>&nbsp;                
+            <input type="radio" name="radio-1" id="radio-40"/>
+            <label for="radio-40">Tahun Terbit</label>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>||</b>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>Shorting By Type:</b> 
+            <label for="checkbox-nested-10">
+                <input type="checkbox" name="checkbox-nested-10" id="checkbox-nested-10"/>Jurnal
+            </label>&nbsp;&nbsp;
+            <label for="checkbox-nested-20">
+                <input type="checkbox" name="checkbox-nested-20" id="checkbox-nested-20"/>Proceeding
+            </label>&nbsp;&nbsp;
+            <label for="checkbox-nested-30">
+                <input type="checkbox" name="checkbox-nested-30" id="checkbox-nested-30"/>Ebook
+            </label>
+        </center>
+    </h:body>
+</html>
+

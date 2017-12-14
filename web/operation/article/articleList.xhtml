@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <!--xmlns:b="http://bootsfaces.net/ui">-->
+
+    <h:head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />     
+        <h:outputStylesheet library="css" name="css_spasi.css" />
+        <title>JSF CRUD Example</title>
+        <style type="text/css">
+            .tableUpdated {
+                width: 100% !important;
+                margin: 0 0 0 !important;
+            }
+            .btnSpace {
+                margin: 0px;
+            }     
+        </style>
+    </h:head>
+
+    <h:body>
+        <br/><br/>
+        <center>            
+            <h:form id="ebookForm" style="align-content:center; width: 1270px">
+                <p:dataTable id="ebookTable" binding="#{table}" value="#{articles.articleList()}" var="article" paginator="true" rows="5"
+                             paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                             rowsPerPageTemplate="5,10,15,20" widgetVar="500" style="width: 1260px; font-size:10px" >
+                    <p:column style="width:2%">
+                        <center>
+                            <f:facet name="header"><center>ID</center></f:facet>
+                            <h:outputText value="#{table.rowIndex + 1}" />
+                        </center>
+                    </p:column>
+                    <p:column style="width:15%">
+                        <f:facet name="header"><center>TITLE</center></f:facet>
+                        <h:outputText value="#{article.title}" />
+                    </p:column>
+                    <p:column style="width:22%">
+                        <f:facet name="header"><center>DESCRIPTION</center></f:facet>
+                        <h:outputText value="#{article.descriptionOrabstract}" />
+                    </p:column>
+                    <p:column style="width:5%">
+                        <f:facet name="header"><center>PUBLISHER</center></f:facet>
+                        <h:outputText value="#{article.publisher}" />
+                    </p:column>
+                    <p:column style="width:5%">
+                        <f:facet name="header"><center>AUTHOR</center></f:facet>
+                        <h:outputText value="#{article.author}" />
+                    </p:column>
+                    <p:column style="width:5%">
+                        <f:facet name="header"><center>PUBLISHED</center></f:facet>
+                        <h:outputText value="#{article.published}" />
+                    </p:column>
+                                        
+                    <p:column style="width:8%">
+                        <center>
+                            <f:facet name="header"><center>ACTION</center></f:facet>
+                            <h:commandButton action="#{articles.editArticleRecord(article.id)}" title="Update" value="Upd" class="glyphicon glyphicon-edit btn btn-primary" />
+                            <h:outputLabel style=" padding-right: 3px" />
+                            <h:commandButton action="#{articles.deleteArticleRecord(article.id)}" title="Delete" value="Del" class="glyphicon glyphicon-remove btn btn-danger" />
+                        </center>
+                    </p:column>
+
+                </p:dataTable>
+                <br/>
+                <br/><p:separator/><br/>
+                <center>
+                    <h:commandButton action="/operation/article/createArticle.xhtml?faces-redirect=true" value="Create New Article" class="btn btn-success btnSpace" />
+                </center>
+            </h:form>
+        </center>
+        <br/>
+    </h:body>
+</html>

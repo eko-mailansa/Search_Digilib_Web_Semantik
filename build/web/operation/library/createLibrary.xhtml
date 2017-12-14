@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />
+        <title>JSF CRUD Example</title>
+        <style type="text/css">
+            .btnWidth {
+                width: 80px;
+            }     
+        </style>
+    </h:head>
+    <h:body>
+        <h:form id="createLibraryForm" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <h2>Create Library Record</h2>
+                </div>
+            </div>
+            <hr/>
+
+            <div class="form-group">
+                <h:outputLabel for="isbn" class="control-label col-sm-4">ISBN:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="isbn" value="#{libraries.isbn}" class="form-control" validatorMessage="ISBN is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="title" class="control-label col-sm-4">TITLE:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="title" value="#{libraries.title}" class="form-control" validatorMessage="Title is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>                
+            <div class="form-group">
+                <h:outputLabel for="descriptionOrabstract" class="control-label col-sm-4">DESCRIPTION:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputTextarea style="width:800px" id="descriptionOrabstract" value="#{libraries.descriptionOrabstract}" cols="50" rows="5" class="form-control" validatorMessage="Description is required">
+                        <f:validateRequired/>
+                    </h:inputTextarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="publisher" class="control-label col-sm-4">PUBLISHER:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="publisher" value="#{libraries.publisher}" class="form-control" validatorMessage="Publisher is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="author" class="control-label col-sm-4">AUTHOR:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="author" value="#{libraries.author}" class="form-control" validatorMessage="Author is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="pages" class="control-label col-sm-4">PAGES:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="pages" value="#{libraries.pages}" class="form-control" validatorMessage="Pages is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="published" class="control-label col-sm-4">PUBLISHED:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="published" value="#{libraries.published}" class="form-control" validatorMessage="Published is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="language" class="control-label col-sm-4">LANGUAGE:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="language" value="#{libraries.language}" class="form-control" validatorMessage="Language is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="format" class="control-label col-sm-4">FORMAT:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="format" value="#{libraries.format}" class="form-control" validatorMessage="Format is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="type" class="control-label col-sm-4">TYPE:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="type" value="#{libraries.type}" class="form-control" validatorMessage="Type is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="capacity" class="control-label col-sm-4">CAPACITY:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText style="width:800px" id="capacity" value="#{libraries.capacity}" class="form-control" validatorMessage="Capacity is required">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="col-sm-2">
+                        <h:commandButton value="Save" action="#{libraries.saveLibraryDetails(libraries)}" class="btn btn-success btnWidth" />
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-2">
+                        <h:link outcome="/Home_Library" value="View Library Record List" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>

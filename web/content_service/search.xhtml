@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<%@ page import="java.sql.*" %>-->
+<!--<%@page contentType="text/html" pageEncoding="UTF-8"%>-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Search</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+        <link rel="stylesheet" href="/resources/demos/style.css"/>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+            var title = [
+                    "A Combined Method for Mitigating Sparsity Problem in Tag  Recommendation",
+                    "A Design Science Approach to Collective Intelligence Systems",
+                    "A Guiding Framework for Ontology Reuse in the Biomedical Domain",
+                    "A Model-Driven Development of Web Applications  Using AngularJS Framework",
+                    "A Pervasive Mobile Assistance System for Health and Fitness Scenarios",
+                    "A PRACTICAL GUIDE TO DATA  STRUCTURES AND ALGORITHMS  USING JAVA",
+                    "A Semantic Knowledgebase Representation of  Geospatial Data in the Context of Bangladesh",
+                    "A Semantic Web Primer second edition",
+                    "A Similarity Measuring Service for SNOMED-CT (Structural analysis of concepts in ontology)",
+                    "A survey of RDF store solutions",
+                    "A Virtual Imaging Platform for Multi-Modality Medical Image Simulation",
+                    "A Web Base Android Application Development System",
+                    "A Web-based Smart Inference System to Support Automated Generation of  LCA Simulation Models",
+                    "Agent-Based Semantic Web Service Composition",
+                    "An Extensible Description Language for Video Games",
+                    "An Introduction to Information Retrieval",
+                    "An Ontology-based Annotation of Cardiac  Implantable Electronic Devices to Detect  Therapy Changes in a National Registry",
+                    "An Ontology-based Information Extraction (OBIE) Framework for Analyzing  Initial Public Offering (IPO) Prospectus",
+                    "Android Essentials",
+                    "Applied Semantic Web Technologies",
+                    "ASeCS: Assistive Self-Care Software Architectures   for Delivering Service in Care Homes",
+                    "Automating the Integration of Clinical Studies into Medical Ontologies",
+                    "Automation System Using DNP3.0 in Smart Grid",
+                    "Building a core biomedical knowledge base",
+                    "Clustered and Smarter Web mining using Semantic Web",
+                    "Connected Smart Cities: Interoperability with SEG 3.0 for the Internet of Things",
+                    "Constructing a Global Social Service Network  for Better Quality of Web Service Discovery",
+                    "Curating A Semantic Bibliographic Catalog",
+                    "Determining Semantically Related Signi?cant Genes",
+                    "Do Ontological Guidelines Improve Understandability of Conceptual Models?  A Meta-Analysis of Empirical Work",
+                    "Electronic  Commerce Meets  the Semantic Web",
+                    "Facelets Essentials: Guide to JavaServer™ Faces View  Definition Framework",
+                    "Foundations of Semantic Web Technologies",
+                    "Fundamentals of Computer Science Using Java",
+                    "Getting Started with Laravel 4",
+                    "How to Successfully Establishing Online Stores?",
+                    "INFORMATION RETRIEVAL  SYSTEMS:  Theory and Implementation ",
+                    "Introduction  to Android™  Application  Development (Fourth Edition)",
+                    "Introduction to Information Retrieval",
+                    "Introduction to IT Architectures and Applications in Healthcare  Environments Minitrack ",
+                    "Introduction to Microprocessors and Microcontrollers",
+                    "Introduction to the Semantic Web  and Semantic Web Services",
+                    "Introduction to Theories in IS Research Minitrack",
+                    "jQuery Cookbook",
+                    "jQuery Tools UI Library",
+                    "jQuery UI",
+                    "jQuery UI 1.10 - The User Interface Library for jQuery",
+                    "jQuery UI 1.6 - The User Interface Library for jQuery",
+                    "jQuery UI 1.7 - The User Interface Library for jQuery",
+                    "jQuery UI 1.8 - The User Interface Library for jQuery",
+                    "jQuery UI Cookbook",
+                    "jQuery UI Themes - Beginner's Guide",
+                    "Laravel Application Development Blueprints",
+                    "Laravel Application Development Cookbook",
+                    "Laravel Starter",
+                    "Learn Java For Web Development",
+                    "Learning Laravel 4 Application Development",
+                    "Mastering jQuery UI",
+                    "Mastering Structured Data On The Semantic Web",
+                    "Microcontrollers: From  Assembly Language to C Using the PIC24 Family",
+                    "Modeling and Generating Graphical User Interface  for MVC Rich Internet Application using a Model  Driven Approach",
+                    "Modeling Semantic Web Services",
+                    "ONTOLOGY AND THE SEMANTIC WEB",
+                    "Ontology Management Semantic Web, Semantic Web Services And Business Applications",
+                    "PBNA: An Improved Probabilistic Biological Network Alignment Method",
+                    "Piecemeal Development of Intelligent Applications for Smart Spaces",
+                    "Pivot: Fast, Synchronous Mashup Isolation Using Generator Chains",
+                    "Pro Android 2",
+                    "Programming the Semantic Web",
+                    "Providing a Source Code Security Analysis Model  Using Semantic Web Techniques",
+                    "Representing Service Business Models with the Service Business Model  Canvas - The Case of a Mobile Payment Service in the Retail Industry",
+                    "RGFinder: A System for Determining  Semantically Related Genes using GO Graph  Minimum Spanning Tree",
+                    "Search Engines Information Retrieval in Practice",
+                    "Semantic Link Network-Based Model for Organizing Multimedia Big Data",
+                    "Semantic Mashups - Intelligent Reuse of Web Resources",
+                    "Semantic Representations of Actors and Resource Allocation through  Reasoning in Humanitarian Crises",
+                    "Semantic Web  And Model-Driven  Engineering",
+                    "Semantic Web And Ontology",
+                    "Semantic Web for Business: Cases and Applications",
+                    "Semantic Web For The Working Ontologist Modeling In RDF, RDFS And OWL",
+                    "Semantic Web Programming",
+                    "Semantic Web Services - Advancement through Evaluation",
+                    "Semantic Web Services: Theory, Tools, and Applications",
+                    "Semantic Web: Concepts, Technologies and Applications",
+                    "Semantic Web-Based  Information Systems: State-of-the-Art Applications",
+                    "Semantics-Based Composition of Factory Automation Processes Encapsulated by Web Services",
+                    "SemanticWeb Technologies Trends and Research in Ontology-based Systems",
+                    "SMARTSPACE: Multiagent Based Distributed Platform for Semantic Service Discovery",
+                    "The CoAP-based M2M Gateway for Distribution",
+                    "The Semantic Web: A Guide to the Future of XML, Web Services, and Knowledge Management",
+                    "The Unified Modeling Language Reference Manual Second Edition",
+                    "Theory Identity: A Machine-Learning Approach",
+                    "Twitter  to  Integrate  Human  and  Smart  Objects  by  a",
+                    "Value-sensitive Hybrid Information Flow Control for a JavaScript-like Language",
+                    "Web  of Things  Architecture",
+                    "X86 Assembly Language and C Fundamentals",
+                    "PENERAPAN WEB SEMANTIK PADA ONTOLOGI PERPUSTAKAAN DIGITAL PUSTAKA ILMIAH"
+
+            ];
+            $("#tags").autocomplete({
+            source: title,
+//                    source: availabletitle
+                    minLength: 2
+//                    source: function ( request, response ) {
+//	    logger (request.term);
+//	    response ( ["X86 Assembly Language and C Fundamentals"] );
+//                    }
+            });
+            });
+        </script>
+    </h:head>
+    <h:body>
+        <div class="ui-widget">
+            <br/>
+            <p:inputText type="text" id="tags" style="width:800px; font-family:serif" onkeyup="function()" placeholder="Search Tittle..."></p:inputText>
+            <p:commandButton value="Search" class="fa fa-search ui-icon-search"/>                     
+        </div>
+        <br/><br/>              
+    </h:body>
+</html>
+
